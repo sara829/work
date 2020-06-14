@@ -1,36 +1,326 @@
-*{
-  padding:0px;
-  margin:0px;
-  box-sizing:border-box;
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@keyframes back {
+  0% {
+    background-color: #FFD700;
+  }
+  25% {
+    background-color: cornflowerblue;
+  }
+  55% {
+    background-color: #C63300;
+  }
+  80% {
+    background-color: #097e66;
+  }
+  100% {
+    background-color: #FFD700;
+  }
+}
+@keyframes title {
+  0% {
+    margin-top: -200px;
+    margin-left: -300px;
+  }
+  50% {
+    margin-top: -75px;
+    margin-left: -50px;
+  }
+  100% {
+    margin-top: -100px;
+    margin-left: -75px;
+  }
+}
+.Top {
+  animation-name: title;
+  animation-duration: 1.5s;
 }
 
-.box{
-  position:relative;
-  top:100px;
-  left:100px;
-  width:50px;
-  height:50px;
-  background:#183;
-  animation-name:boxmove;
-  animation-duration:5s;
-  animation-iteration-count:infinite;
-  animation-direction:alternate;
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  /*border:solid 1px #FFFF33*/
 }
 
-@keyframes boxmove{
-  0%{
-    left:100px;
-    background:#183;
+body {
+  position: relative;
+  background-color: #00DDAA;
+  box-sizing: border-box;
+  border-top: solid 30px	#550088;
+  border-bottom: solid 30px #550088;
+  overflow: hidden;
+  animation: back 12s infinite;
+}
+
+.Top {
+  position: absolute;
+  height: 300px;
+  width: 330px;
+  background-color: #3e6e7f;
+  color: #ffffff;
+  border-radius: 35px 35px 225px 30px;
+  margin-top: -100px;
+  margin-left: -75px;
+  font-family: 'Oswald', sans-serif;
+}
+.Top h3 {
+  margin-left: 100px;
+  margin-top: 80px;
+  font-size: 25px;
+  width: 100px;
+  line-height: 60px;
+}
+.Top h3 span {
+  background-color: red;
+  font-size: 60px;
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  left: 100%;
+}
+
+.namecard {
+  position: fixed;
+  width: 280px;
+  height: 200px;
+  left: 70%;
+  top: 40%;
+  padding: 0px 20px 30px 20px;
+  overflow: hidden;
+  background-color: rgba(176, 136, 255, 0.8);
+  color: #FFF;
+  border: solid 1px rgba 0, 0, 0, 0.15;
+  box-shadow: 20px 25px 15px -15px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font-family: 華康秀風體W3;
+  transition: 0.5s;
+}
+.namecard hr {
+  border-color: #fff;
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+.namecard h2 {
+  font-size: 30px;
+}
+.namecard span {
+  font-size: 20px;
+}
+.namecard h5 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.namecard:hover {
+  transform: translate(-50px, -30px);
+  box-shadow: -20px -25px 15px -15px rgba(0, 0, 0, 0.5);
+}
+
+.allbub {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+  z-index: -3;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+@keyframes falling {
+  0%,100% {
+    opacity: 0;
   }
-  25%{
-    background:#388;
+  70% {
+    opacity: 1;
   }
-  50%{
-    background:#b11;
-    transform: scale(2.25) rotate(-350deg)
+  0% {
+    transform: translate(100%, 0px);
   }
-  100%{
-    left:300px;
-    background:#f95;
+  100% {
+    transform: translate(0px, 100%);
   }
+}
+.allbub [class*='bub'] {
+  background-color: #D3D3D3;
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  animation: falling 5s infinite;
+}
+.allbub .bub1 {
+  position: absolute;
+  left: 50.9241401898%;
+  top: -2.9640878022%;
+  animation-delay: -0.1s;
+}
+.allbub .bub2 {
+  position: absolute;
+  left: 76.0541192839%;
+  top: 66.1767464514%;
+  animation-delay: -0.2s;
+}
+.allbub .bub3 {
+  position: absolute;
+  left: 40.2664183982%;
+  top: 78.0761928692%;
+  animation-delay: -0.3s;
+}
+.allbub .bub4 {
+  position: absolute;
+  left: 87.4719992268%;
+  top: 12.2671308152%;
+  animation-delay: -0.4s;
+}
+.allbub .bub5 {
+  position: absolute;
+  left: 83.8733378842%;
+  top: 69.9031371148%;
+  animation-delay: -0.5s;
+}
+.allbub .bub6 {
+  position: absolute;
+  left: 8.1363518358%;
+  top: 61.0388403949%;
+  animation-delay: -0.6s;
+}
+.allbub .bub7 {
+  position: absolute;
+  left: 76.6818733287%;
+  top: 12.8535759085%;
+  animation-delay: -0.7s;
+}
+.allbub .bub8 {
+  position: absolute;
+  left: 66.7037465559%;
+  top: 30.7957177759%;
+  animation-delay: -0.8s;
+}
+.allbub .bub9 {
+  position: absolute;
+  left: 39.480692372%;
+  top: 72.5207064643%;
+  animation-delay: -0.9s;
+}
+.allbub .bub10 {
+  position: absolute;
+  left: 71.028990777%;
+  top: 22.4982174039%;
+  animation-delay: -1s;
+}
+.allbub .bub11 {
+  position: absolute;
+  left: 65.6046546308%;
+  top: 72.5658126832%;
+  animation-delay: -1.1s;
+}
+.allbub .bub12 {
+  position: absolute;
+  left: 23.2501767463%;
+  top: 80.8945986127%;
+  animation-delay: -1.2s;
+}
+.allbub .bub13 {
+  position: absolute;
+  left: 75.2961214591%;
+  top: 34.9976799143%;
+  animation-delay: -1.3s;
+}
+.allbub .bub14 {
+  position: absolute;
+  left: 33.798597951%;
+  top: -7.6798475213%;
+  animation-delay: -1.4s;
+}
+.allbub .bub15 {
+  position: absolute;
+  left: 66.1539379724%;
+  top: 8.6737030005%;
+  animation-delay: -1.5s;
+}
+.allbub .bub16 {
+  position: absolute;
+  left: 64.7306577158%;
+  top: 25.8288976361%;
+  animation-delay: -1.6s;
+}
+.allbub .bub17 {
+  position: absolute;
+  left: 8.1380381074%;
+  top: 70.8652220978%;
+  animation-delay: -1.7s;
+}
+.allbub .bub18 {
+  position: absolute;
+  left: 8.4717561354%;
+  top: 40.548476762%;
+  animation-delay: -1.8s;
+}
+.allbub .bub19 {
+  position: absolute;
+  left: 56.1966907299%;
+  top: 1.3254481062%;
+  animation-delay: -1.9s;
+}
+.allbub .bub20 {
+  position: absolute;
+  left: 61.4608892804%;
+  top: -5.8410345351%;
+  animation-delay: -2s;
+}
+
+.p1 {
+  /*border:solid 1px;*/
+  background-color: rgba(176, 136, 255, 0.8);
+  width: 150px;
+  height: 150px;
+  left: 48%;
+  top: 18%;
+  border-radius: 50%;
+  position: absolute;
+  transition: 0.4s;
+  box-shadow: 20px 25px 15px 2px rgba(0, 0, 0, 0.25);
+}
+
+.p1:hover {
+  background-color: rgba(176, 136, 255, 0.3);
+  transform: translate(-20px, -20px);
+  box-shadow: -20px -25px 15px -15px rgba(0, 0, 0, 0.5);
+}
+
+h6 {
+  position: absolute;
+  top: 5px;
+  left: 30px;
+  font-size: 28px;
+  font-family: 華康秀風體W3;
+  color: #fff;
+}
+
+.p2 {
+  /*border:solid 1px;*/
+  background-color: rgba(176, 136, 255, 0.8);
+  width: 180px;
+  height: 180px;
+  left: 28%;
+  top: 48%;
+  border-radius: 50%;
+  position: absolute;
+  transition: 0.4s;
+  box-shadow: 20px 25px 15px 2px rgba(0, 0, 0, 0.25);
+}
+
+.p2:hover {
+  background-color: rgba(176, 136, 255, 0.3);
+  transform: translate(-20px, -20px);
+  box-shadow: -20px -25px 15px -15px rgba(0, 0, 0, 0.5);
+}
+
+.web {
+  position: absolute;
+  top: 75%;
+  left: 3%;
 }
